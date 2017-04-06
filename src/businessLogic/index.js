@@ -1,4 +1,6 @@
 /**
- * Created by younderboy on 27-02-2017.
+ * Created by younderboy on 4/6/17.
  */
-import "./deviceReady";
+import * as postCoordinates from './postCoordinates';
+
+export { postCoordinates }

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import { postCoordinates } from '../../businessLogic';
 
 const Home = ({home, dispatch}) => {
     const styles = {
@@ -51,7 +52,7 @@ const Home = ({home, dispatch}) => {
                     />
 
                     <br/>
-                    <RaisedButton label="Submit" primary={true} style={styles.paper.submitBtn} />
+                    <RaisedButton label="Submit" primary={true} style={styles.paper.submitBtn} onTouchTap={()=>postCoordinates.postCoordinates()}/>
                 </div>
 
             </Paper>
