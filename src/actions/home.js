@@ -1,9 +1,14 @@
 /**
  * Created by younderboy on 26-02-2017.
  */
-export function toggleOpen(open) {
+export function setCoordinates(x, y, z, claw) {
     return {
-        type: "TOGGLE_OPEN",
-        payload: open
+        type: "SET_COORDINATES",
+        payload: {
+            x: x,
+            y: y,
+            z: z,
+            claw: claw
+        }
     }
 }

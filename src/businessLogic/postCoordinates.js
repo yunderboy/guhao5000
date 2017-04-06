@@ -9,7 +9,8 @@ export function postCoordinates(x, y, z) {
     axios.post(rootUrl+'/coordinates', {
         x: 38,
         y: 424,
-        z: 32
+        z: 32,
+        claw: true
     })
         .then(function (response) {
             console.log(response);
@@ -18,4 +19,3 @@ export function postCoordinates(x, y, z) {
             console.log(error);
         });
 }
-
