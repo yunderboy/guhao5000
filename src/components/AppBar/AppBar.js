@@ -7,9 +7,8 @@ const AppBar = () => {
 
     return (
         <AppBar1
-            title={'InFood'}
-            showMenuIconButton={true}
-            style={{backgroundColor: '#dc0000'}}
+            title={'Guaho5000'}
+            showMenuIconButton={false}
         />
     )
 };

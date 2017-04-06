@@ -2,22 +2,59 @@
  * Created by younderboy on 21-02-2017.
  */
 import React from 'react';
-import logo from './logo.svg';
-import FabFlick from '../FabFlick';
 import { connect } from 'react-redux';
-import Appbar from './AppBar';
+import Paper from 'material-ui/Paper';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const Home = ({home, dispatch}) => {
+    const styles = {
+        body: {
+            padding: '1rem'
+        },
+        paper: {
+            margin: 'auto',
+            width: '50%',
+
+            textFields: {
+                padding: '1rem'
+            },
+            submitBtn: {
+                margin: 1
+            }
+        }
+    };
+
     return (
-        <div>
-            <Appbar/>
-            <div style={{
-                position: 'fixed',
-                bottom: '0.5rem',
-                right: '0.5rem',
-            }}>
-                <FabFlick FABsOpen={home.FABsOpen} dispatch={dispatch}/>
-            </div>
+        <div style={styles.body}>
+            <Paper style={styles.paper}>
+
+                <div style={styles.paper.textFields}>
+                    <h3>Coordinate input</h3>
+                    {/* X coordinate */}
+                    <TextField
+                        hintText="X"
+                        floatingLabelText="X coordinate"
+                        floatingLabelFixed={true}
+                    />
+                    {/* Y coordinate */}
+                    <TextField
+                        hintText="Y"
+                        floatingLabelText="Y coordinate"
+                        floatingLabelFixed={true}
+                    />
+                    {/* Z coordinate */}
+                    <TextField
+                        hintText="Z"
+                        floatingLabelText="Z coordinate"
+                        floatingLabelFixed={true}
+                    />
+
+                    <br/>
+                    <RaisedButton label="Submit" primary={true} style={styles.paper.submitBtn} />
+                </div>
+
+            </Paper>
         </div>
     )
 };

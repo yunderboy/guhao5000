@@ -1,8 +1,9 @@
 import React from 'react';
-import AppBar from './components/Home/AppBar';
+import AppBar from './components/AppBar';
 
 const App = ({children}) => (
     <div>
+        <AppBar/>
         <div>{children}</div>
     </div>
 );
