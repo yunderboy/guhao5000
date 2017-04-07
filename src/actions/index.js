@@ -1,6 +1,6 @@
 /**
  * Created by younderboy on 26-02-2017.
  */
-import * as home from './home';
+import * as homeActions from './home';
 
-export { home };
+export { homeActions };
